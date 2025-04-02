@@ -2,317 +2,572 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Marck">
-          
-    <script src="https://kit.fontawesome.com/afe9cb5133.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Codespaces</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-    <title>CODESPACES TECH</title>
-    
-    <style>
+  <!-- Favicons -->
+  <link href="assets/img/Logo Only Orange White.png" rel="icon">
+  <link href="assets/img/Logo Only Orange White.png" rel="apple-touch-icon">
 
-        @media screen and (max-width: 600px) {
-            .topnav.responsive {position: relative;}
-            .topnav.responsive a.icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-            .topnav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        .topnav {
-            background-color: #4a4a4a;;
-            overflow: hidden;
-            align-items: left;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 30px;
-        }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        .topnav__right {
-            background-color: #4a4a4a;
-            overflow: hidden;
-            align-items: center;
-            display: flex;
-            padding-right: 30px;
-        }
-        /* Style the links inside the navigation bar */
-        .topnav a {
-            float: right;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-        /* Change the color of links on hover */
-        .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-        }
-
-        /* Add an active class to highlight the current page */
-        .topnav a.active {
-        background-color: #FF3C00;
-        color: white;
-        }
-
-        /* Hide the link that should open and close the topnav on small screens */
-        .topnav .icon {
-        display: none;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
- 	        background-color: #fff;
-            color: #333;
-            background-image: url(background-abstract2.png);
-            background-repeat: no-repeat;
-        }
-
-        header {
-            background-color: #333;
-            color: #333;
-            text-align: center;
-        }
-
-        .logo {
-            max-width: 100px;
-            max-height: 100px;
-            padding-top: 0.5em;
-            padding: 0.5em;
-            color: #fff;
-        }
-
-        section {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #4a4a4a;
-            color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #FF3C00;
-            font-size: 18pt;
-        }
-
-        h1 {
-	        color: #fff;
-            font-style: italic;
-            font-size: 32px;
-            text-align: center;
-	    }
-
-        h3 {
-            font-size: 12px;
-            color: #fff;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background-color: #333;
-            color: #fff;
-        }
-
-        i+h3 {
-            display: inline-block;
-        }
-
-        .icon {
-            text-decoration: none;
-            font-size: 1em;
-            /* edit this to change the size of the icon */
-            display: inline-block;
-            width: 3em;
-            position: relative;
-        }
-
-        i+h2 {
-            display: inline-block;
-        }
-
-        .icon:before {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            font-family: FontAwesome;
-            font-style: normal;
-            font-weight: normal;
-            text-transform: none !important;
-            background: #fff;
-            border-radius: 100%;
-            color: #333;
-            display: inline-block;
-            line-height: 2.5em;
-            text-align: center;
-            width: 2.5em;
-        }
-
-        section .fulltext {
-          display: none;
-          
-          font-size: 12pt;
-        }
-
-        section:hover .title {
-          display: none;
-          
-        }
-
-        section:hover .fulltext {
-          display: inline;
-          
-        }
-
-
-
-    </style>
 </head>
 
-<body>
-    <header>
+<body class="index-page">
 
-    <div class="topnav" id="myTopnav">
-        <img src="images/CODESPACES-LOGO-Orange-White.png" alt="Official Logo" class="logo">
-        
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-        <div class="topnav__right">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/Logo Only Orange White.png" alt="">
+        <h1 class="sitename">Codespaces</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn" href="index.html#contact">Contact</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Begin Home Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img id="homeMovingImage" src="assets/img/languages-background.jpg" alt="" data-aos="fade-in" class="front-page-image">
+
+      <div class="container d-flex flex-column align-items-center">
+        <h2 data-aos="fade-up" data-aos-delay="100">IMAGINE. DESIGN. BUILD.</h2>
+        <p data-aos="fade-up" data-aos-delay="200">We are a team of driven developers, analysts and IT professionals</p>
+        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#about" class="btn-get-started">Learn More</a>
+          <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+          <!-- <a href="apply.html" target="_blank" class="btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Apply Today</span></a> -->
         </div>
       </div>
 
-      <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-        </script>
-        
-    </header>
-
-    <section>
-        <h1>CODESPACES TECH</h1>
-        <hr>
-        <br><br>
-
-        <i class="icon fa-solid fa-users"></span> </i>
-
-        <h2 id="about">Who We Are</h2>
-        <p>
-            We are a new defense contracting company dedicated to providing innovative solutions
-            for the most challenging defense and security needs. Our team of experts is committed to
-            ensuring the safety and security of our nation through cutting-edge technology and unwavering
-            dedication.
-        </p>
-        <p>
-            The company was founded by three friends who all have a passion for designing and developing software
-            solutions where we can reimagine how users get the mission done. We have all worked across national and tactical spaces
-            for decades, and we ensure our core values guide how we do business. 
-        </p>
-        <br>
-        
     </section>
+    <!-- End Home Section -->
 
-    <section style="background-color: #717171;">  
-        <div style="font-size: 12pt; font-family: 'Marck';">
-            <i class="icon fa-solid fa-info-circle"></span> </i>
-            <span class="title">EMPLOYEE-FOCUSED </span>
-            
-            <span class="fulltext">
-                <span>EMPLOYEE-FOCUSED </span>
-                <p>We believe that employees should love where they work, and CODESPACES makes that a core value within our company culture.
-                Hire people with great integrity and who want to do the best for their customers.</p>
-            </span>
+
+    <!-- Begin About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3>Passionate about our customers and solutions</h3>
+            <img src="assets/img/woman-coding-shutterstock_2279559063.jpg" class="about-page-image img-fluid rounded-4 mb-4" alt="">
+            <p>We are a defense contracting company dedicated to providing innovative solutions for the most challenging defense and security needs. Our team of experts is committed to ensuring the safety and security of our nation through cutting-edge technology and unwavering dedication.</p>            
+            <p>The company was founded by three industry partners who all have a passion for designing and developing software solutions where we can reimagine how users get the mission done. We have all worked across national and tactical spaces for decades, and we ensure our core values guide how we do business.</p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                Our ethos emphasizes core values like teamwork, creativity, and ethical responsibility while also highlighting a dedication to customer satisfaction. 
+                It's aspirational yet grounded, offering a sense of purpose beyond profits.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>We believe in the power of collaboration, innovation, and integrity</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>We value honesty in every interaction, creativity in problem-solving, and commitment to sustainable practices.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>We strive to create a positive impact in all we do.</span></li>
+              </ul>
+
+              <p>
+                Teamwork goes beyond just forming a team. Bringing team members together who share a common
+                passion for the work they do matters. Attitude matters. Helping co-workers become better 
+                at what they do matters. Sometimes an animation says it best.
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="assets/img/teamwork-pic.png" class="img-fluid rounded-4" alt="">
+                <a href="https://www.youtube.com/watch?v=4duPBWzf46E" class="glightbox pulsating-play-btn"></a>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section style="background-color: #717171;">   
-        <div style="font-size: 12pt; font-family: 'Marck';">
-            <i class="icon fa-solid fa-info-circle"></span> </i>
-            <span class="title">CUSTOMER-DRIVEN</span>
-            
-            <span class="fulltext">
-                <span>CUSTOMER-DRIVEN</span>
-                <p>
-		At the heart of everything we do lies a relentless dedication to putting our customers first. Our ethos is simple: Your vision is our mission. 
-		From the initial concept to the final product, we collaborate closely with you every step of the way, ensuring that your unique needs and aspirations are not just met, but exceeded.
-		With a team of passionate developers, designers, and engineers, we craft tailor-made solutions that not only solve your challenges but also elevate your mission to new heights. 
-		</p>
-		<p>
-		We listen intently to your feedback, iterate tirelessly, and strive for perfection, because your satisfaction is our ultimate reward.
-		Join forces with us and experience the difference of a truly customer-driven approach. Let's build something extraordinary together!
-		</p>
+      </div>
 
-            </span>
-        </div>
     </section>
+    <!-- End About Section -->
+
     
-    <section style="background-color: #4a4a4a;">
-        <br>
 
-        <i class="icon fa-solid fa-screwdriver-wrench"></span> </i>
-        <h2 id="services">Services We Offer</h2>
-        <p>
-            Explore our comprehensive range of defense contracting services, including:
-            <ul>
-                <li>Software Design and Development</li>
-                <li>Systems and Security Engineering for Defense Capabilities</li>
-  		        <li>Systems Administration and DevSecOps
-                <li>Strategic Consulting</li>
-                <li>National and Tactical Collection and Processing</li>
-            </ul>
-        </p>
+    <!-- Begin Services Section -->
+    <section id="services" class="services section">
 
-        <br>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Featured Services<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/devsecops-3x2-2346923703.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <a href="service-details.html" class="stretched-link">
+                  <h3>DevSecOps</h3>
+                </a>
+                <!-- <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis.</p> -->
+                <p>Forging teams of developers, security experts, and operations to produce secure capabilities.</p>
+
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/engineering-ops-2474281675.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-broadcast"></i>
+                </div>
+                <a href="service-details.html" class="stretched-link">
+                  <h3>Engineering and Operations</h3>
+                </a>
+                <p>From concept definition to fielding and maintaining deployed systems, mission success is what drives us.</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/analysis-2x3-1936992886.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <a href="service-details.html" class="stretched-link">
+                  <h3>Technical Analysis</h3>
+                </a>
+                <p>We are more than solutions providers as we also employ analysts who work alongside military and government 
+                  personnel to provide various forms of Intel Analysis. </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+        </div>
+
+      </div>
+
     </section>
+    <!-- End Services Section -->
 
 
-    <section>
-        <i class="icon fa-regular fa-envelope"></span> </i>
-        <h2 id="contact">Reaching Out To Us</h2>
-        <p>
-            For inquiries and more information about our services, please contact us at:
-            <br>
-            Email: info@codespacestech.com
-            <br>
-        </p>
+
+
+
+    <!-- Begin Features Section -->
+    <section id="features" class="features section">
+
+      <div class="container">
+
+        <ul class="nav nav-tabs row  d-flex" data-aos="fade-up" data-aos-delay="100">
+          <li class="nav-item col-6">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+              <i class="bi bi-binoculars"></i>
+              <h4 class="d-none d-lg-block">Technology Tradeoff Studies</h4>
+            </a>
+          </li>
+
+          <li class="nav-item col-6">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+              <i class="bi bi-brightness-high"></i>
+              <h4 class="d-none d-lg-block">Cloud Services</h4>
+            </a>
+          </li>
+          
+        </ul>
+        <!-- End Tab Nav -->
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="features-tab-1">
+            <div class="row">
+
+              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
+                <h3>Know Your Options </h3>
+                <p class="fst-italic">
+                  We help customers define problems in terms of actionable objectives.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i>
+                    <spab>Define the Problem and Scope</spab>
+                  </li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Define Evaluation Criteria</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Identify Alternatives</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Evaluate Alternatives</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Recommend a Solution</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Document and Communicate</span></li>
+                </ul>
+
+                <p>
+                  We work closely with customers and teammates to perform trade studies and analysis of alternatives. 
+                </p>
+                
+                <p>
+                  We don't push solutions or technologies unless we have the data to back it up.
+                  We dig deep and weigh the pros and cons of each option before making recommendations. As technologists, we love
+                  to find these funny, animated clips about how NOT to perform analysis of options. This funny clip says it all.
+                </p>
+
+                
+              </div>
+
+              <div class="col-lg-6 order-2 order-lg-2 mt-3 mt-lg-0">
+                <div class="position-relative mt-4">
+                  <img src="assets/img/mongodb-webscale.png" class="img-fluid rounded-4" alt="">
+                  <a href="https://www.youtube.com/watch?v=b2F-DItXtZs" class="glightbox pulsating-play-btn"></a>
+                </div>
+              </div>
+             
+
+              
+            </div>
+          </div>
+          <!-- End Tab Content Item -->
+
+
+          <div class="tab-pane fade" id="features-tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3> Speed, Scale & Capacity</h3>
+                <p class="fst-italic">
+                  We help customers transition to or maintain cloud services.
+                </p>
+
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> <span> <b>Our AWS Experience </b></span></li>
+                  <li><i class="bi bi-check"></i> <span> Compute: EC2 and Lambda </span></li>
+                  <li><i class="bi bi-check"></i> <span> Storage: S3, EBS, Glacier </span></li>
+                  <li><i class="bi bi-check"></i> <span> Databases: RDS, DynamoDB, Aurora </span></li>
+                  <li><i class="bi bi-check"></i> <span> Networking: VPC, Route 53, CloudFront </span></li>
+                  <li><i class="bi bi-check"></i> <span> Analytics: Athena, Redshift, Amazon QuickSight </span></li>
+                  <li><i class="bi bi-check"></i> <span> AI/ML: SageMaker, Rekognition, Lex </span></li>
+
+                  <li><i class="bi bi-check-circle-fill"></i>
+                    <span><b>Our Azure Experience</b></span>
+                  </li>
+                  <li><i class="bi bi-check"></i> <span>  Compute:  Virtual Machines,  Functions</span></li>
+                  <li><i class="bi bi-check"></i> <span>  Storage:  Blob Storage, Disk Storage </span></li>
+                  <li><i class="bi bi-check"></i> <span>  Databases:  SQL Database,  Cosmos DB, Database for MySQL </span></li>
+                  <li><i class="bi bi-check"></i> <span>  Networking:  Virtual Network, DNS, Content Delivery Network </span></li>
+                  <li><i class="bi bi-check"></i> <span>  Analytics:  Synapse Analytics, Data Explorer, Stream Analytics </span></li>
+                  <li><i class="bi bi-check"></i> <span>  AI/ML:  Machine Learning, Cognitive Services </span></li>
+                </ul>
+
+              </div>
+
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <div class="row">
+                  <img src="assets/img/cloud-services-400293949.jpg" alt="" class="img-fluid rounded-4">
+                </div>
+
+                <div class="row">
+                  <p style="text-align: left; padding: 10px;"><br>
+                    Staff at Codespaces have helped customers in both the commercial and government spaces stand up virtual and 
+                    elastic cloud services with both AWS and Azure. We welcome new customers to reach out and discuss how we 
+                    can help you with your cloud needs. 
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- End Tab Content Item -->
+
+
+
+        </div>
+
+      </div>
 
     </section>
+    <!-- End Features Section -->
 
-    <br>
 
-    <footer>
-        <p>&copy; 2024 CODESPACES TECH INC. All rights reserved.</p>
-    </footer>
+    <!-- Begin Leadership Section -->
+    <section id="leadership" class="leadership section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Partners</h2>
+        <p>MEET OUR LEADERSHIP</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="pic"><img src="assets/img/team/Joe-grayscale.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Joseph Bedwell</h4>
+                <span>Chief Executive Officer</span>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/joseph-bedwell/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Leadership Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="pic"><img src="assets/img/team/Jeb2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Jeb Pair</h4>
+                <span>President</span>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/jeb-pair-854baa13" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Leadership Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="assets/img/team/Tony-grayscale.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Tony Alletag</h4>
+                <span>Chief Technology Officer</span>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/tony-alletag-2323192a/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Leadership Member -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Leadership Section -->
+
+
+
+
+
+    <!-- Testimonials Section -->
+
+    <section id="testimonials" class="testimonials section dark-background">
+
+      <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 8000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/team/Joe-grayscale.png" class="testimonial-img" alt="">
+                <h3>Joe Bedwell</h3>
+                <h4>CEO &amp; Co-Founder</h4>
+                <div class="stars">
+                  <div class="divider div-transparent div-dot"></div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I am passionate about building a great company with lasting partnerships and customers that love what we provide.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/team/Tony-grayscale.jpg" class="testimonial-img" alt="">
+                <h3>Tony Alletag</h3>
+                <h4>CTO &amp; Co-Founder</h4>
+                <div class="stars">
+                  <div class="divider div-transparent div-dot"></div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I believe in building great solutions for our customers. I also believe that a great tech stack is usually more important to 
+                    the engineering team than the customer. The customer and users want working and sustainable solutions. I try to establish these fundamentals 
+                    when mentoring our more junior staff. 
+                  </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/team/Jeb.jpg" class="testimonial-img" alt="">
+                <h3>Jeb Pair</h3>
+                <h4>President &amp; Co-Founder</h4>
+                <div class="stars">
+                  <div class="divider div-transparent div-dot"></div>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I am driven by building a company where employees love what they do and have lasting memories both at work and outside the workplace. </span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Testimonials Section -->
+
+
+    
+
+    <!-- Begin Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>For inquiries, use the info below.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-12 ">
+            <div class="row gy-4">
+
+              <div class="col-lg-12">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>120 Brass Eagle Drive, Sykesville, MD 21784</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>(443) 492-9563</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@codespacestech.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2024 Copyright</span> <strong class="px-1 sitename">Codespaces Tech</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+
+        Designed by Codespaces Tech
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
-
